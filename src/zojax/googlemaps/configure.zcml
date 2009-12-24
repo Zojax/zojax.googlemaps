@@ -1,0 +1,20 @@
+<configure
+   xmlns="http://namespaces.zope.org/zope"
+   xmlns:i18n="http://namespaces.zope.org/i18n"
+   xmlns:zojax="http://namespaces.zope.org/zojax"
+   i18n_domain="zojax.googlemaps">
+
+  <zojax:product
+     name="zojax-googlemaps"
+     title="Google Maps"
+     description="Google maps integration for zojax."
+     schema=".interfaces.IGoogleMapsProduct"
+     configurable="true" />
+
+  <!-- translations -->
+  <i18n:registerTranslations directory="locales"/>
+
+  <!-- browser -->
+  <include package=".browser" />
+
+</configure>

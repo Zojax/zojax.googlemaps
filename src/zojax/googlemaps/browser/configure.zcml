@@ -1,0 +1,22 @@
+<configure
+   xmlns="http://namespaces.zope.org/zope"
+   xmlns:zojax="http://namespaces.zope.org/zojax"
+   xmlns:browser="http://namespaces.zope.org/browser"
+   i18n_domain="zojax.googlemaps">
+
+  <zojax:pagelet
+     name="mapview"
+     for="..interfaces.IGoogleMapsProduct"
+     manager="zope.interface.Interface"
+     template="mapview.pt"
+     class=".mapview.GoogleMapView"
+     provides="zojax.layoutform.interfaces.IPageletSubform"
+     permission="zope.Public" />
+
+  <!--zojax:resourceinclude
+     name="zojax.googlemaps.mainscript"
+     library="zojax.googlemaps"
+     type="inplace"
+     file="" /-->
+
+</configure>
